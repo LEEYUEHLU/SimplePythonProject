@@ -23,7 +23,7 @@ def DeterminIfLeave():
 def DisplayQuestion():
     print("############################################################")
     global  total_question_numbers
-    total_question_numbers = random.randrange(7,8)
+    total_question_numbers = random.randrange(3,5)
     print("Here comes the " + str(total_question_numbers)+ " question\n")
 
 def AskQuestion():
@@ -36,6 +36,10 @@ def AskQuestion():
 
 def PrepareQuestion():
     global  total_question_numbers
+    global  question
+    global  score
+    score = 0
+    question.clear()
     for i in range(total_question_numbers):
         length = len(pitch_of_names)
         letter = pitch_of_names[random.randrange(0, length)]
